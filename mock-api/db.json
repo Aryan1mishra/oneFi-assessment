@@ -1,0 +1,87 @@
+{
+  "products": [
+    {
+      "id": "iphone-16",
+      "name": "iPhone 16",
+      "brand": "Apple",
+      "category": "Smartphones",
+      "price": 79999,
+      "rating": 4.8,
+      "image": "https://images.unsplash.com/photo-1592286927505-2fd6f2b6d2a5?auto=format&fit=crop&w=900&q=85",
+      "description": "A powerful smartphone with a vibrant display, advanced camera system and next-generation performance.",
+      "details": ["6.1-inch display", "128 GB storage", "A18 chip", "48 MP camera"],
+      "variants": [
+        {"id": "128gb-black", "label": "128 GB • Black", "price": 79999},
+        {"id": "256gb-blue", "label": "256 GB • Blue", "price": 89999}
+      ],
+      "emiPlans": [
+        {"id": "3m", "months": 3, "rate": 0, "monthly": 26667},
+        {"id": "6m", "months": 6, "rate": 2.99, "monthly": 13550},
+        {"id": "12m", "months": 12, "rate": 3.99, "monthly": 6830},
+        {"id": "24m", "months": 24, "rate": 4.99, "monthly": 3660}
+      ]
+    },
+    {
+      "id": "samsung-s25",
+      "name": "Samsung Galaxy S25",
+      "brand": "Samsung",
+      "category": "Smartphones",
+      "price": 74999,
+      "rating": 4.7,
+      "image": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=900&q=85",
+      "description": "Premium Android performance with a high-resolution display and versatile camera experience.",
+      "details": ["6.2-inch AMOLED", "256 GB storage", "12 GB RAM", "50 MP camera"],
+      "variants": [
+        {"id": "256gb-navy", "label": "256 GB • Navy", "price": 74999},
+        {"id": "512gb-silver", "label": "512 GB • Silver", "price": 84999}
+      ],
+      "emiPlans": [
+        {"id": "3m", "months": 3, "rate": 0, "monthly": 25000},
+        {"id": "6m", "months": 6, "rate": 2.99, "monthly": 12700},
+        {"id": "12m", "months": 12, "rate": 3.99, "monthly": 6400},
+        {"id": "24m", "months": 24, "rate": 4.99, "monthly": 3430}
+      ]
+    },
+    {
+      "id": "macbook-air",
+      "name": "MacBook Air M3",
+      "brand": "Apple",
+      "category": "Laptops",
+      "price": 114999,
+      "rating": 4.9,
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=85",
+      "description": "Thin, light and powerful laptop designed for everyday productivity and creative workflows.",
+      "details": ["13.6-inch Liquid Retina", "8 GB RAM", "256 GB SSD", "Apple M3 chip"],
+      "variants": [
+        {"id": "256gb-midnight", "label": "256 GB • Midnight", "price": 114999},
+        {"id": "512gb-starlight", "label": "512 GB • Starlight", "price": 134999}
+      ],
+      "emiPlans": [
+        {"id": "6m", "months": 6, "rate": 2.99, "monthly": 19450},
+        {"id": "12m", "months": 12, "rate": 3.99, "monthly": 9800},
+        {"id": "24m", "months": 24, "rate": 4.99, "monthly": 5250},
+        {"id": "36m", "months": 36, "rate": 5.49, "monthly": 3640}
+      ]
+    },
+    {
+      "id": "sony-headphones",
+      "name": "Sony WH-1000XM5",
+      "brand": "Sony",
+      "category": "Audio",
+      "price": 29990,
+      "rating": 4.6,
+      "image": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=900&q=85",
+      "description": "Premium wireless headphones with active noise cancellation and long battery life.",
+      "details": ["Active noise cancellation", "30-hour battery", "Bluetooth multipoint", "Fast charging"],
+      "variants": [
+        {"id": "black", "label": "Black", "price": 29990},
+        {"id": "silver", "label": "Silver", "price": 29990}
+      ],
+      "emiPlans": [
+        {"id": "3m", "months": 3, "rate": 0, "monthly": 9997},
+        {"id": "6m", "months": 6, "rate": 2.99, "monthly": 5080},
+        {"id": "12m", "months": 12, "rate": 3.99, "monthly": 2580}
+      ]
+    }
+  ]
+}
