@@ -1,16 +1,10 @@
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
+const API_URL = "/api";
 
-/**
- * Small API layer.
- *
- * Components never talk directly to json-server. This keeps data access
- * replaceable when a real backend is introduced later.
- */
-async function request(path) {
-  const response = await fetch(`${API_URL}${path}`);
+async function request(endpoint) {
+  const response = await fetch(`${API_URL}${endpoint}`);
 
   if (!response.ok) {
-    throw new Error(`API request failed: ${response.status}`);
+    throw new Error("Unable to fetch marketplace data.");
   }
 
   return response.json();
@@ -21,5 +15,5 @@ export async function getProducts() {
 }
 
 export async function getProductById(productId) {
-  return request(`/products/${productId}`);
+  return request(`/products?id=${productId}`);
 }
