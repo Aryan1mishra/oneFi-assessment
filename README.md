@@ -79,6 +79,4 @@ GET /products/:id
 # EMI plans use mock data/configuration for demonstration purposes.
 # Product images and product information are also based on mock/demo data.
 # The project is structured so that the mock API can later be replaced with a production backend without changing the UI components significantly.
-
-
-The product numbers in `mock-api/db.json` are demonstration data only. Replace them with the API/business-approved EMI calculations if a real backend is provided.
+# The product numbers in `mock-api/db.json` are demonstration data only. Replace them with the API/business-approved EMI calculations if a real backend is provided.
