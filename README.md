@@ -17,33 +17,6 @@ This project intentionally keeps the existing Shop concept simple and focuses en
 - Lucide React
 - JSON Server for a local mock REST API
 
-## Architecture
-
-```text
-src/
-├── components/
-│   ├── BottomNav.jsx
-│   ├── EmiPlanSelector.jsx
-│   ├── ProductCard.jsx
-│   ├── ProductGridSkeleton.jsx
-│   ├── ShopHero.jsx
-│   └── ShopTabs.jsx
-├── hooks/
-│   └── useProducts.js
-├── pages/
-│   ├── MarketplacePage.jsx
-│   ├── ProductDetailsPage.jsx
-│   └── ShopPage.jsx
-├── services/
-│   └── productApi.js
-├── App.jsx
-├── index.css
-└── main.jsx
-
-mock-api/
-└── db.json
-```
-
 ## Run locally
 
 Requirements:
@@ -82,45 +55,30 @@ GET /products
 GET /products/:id
 ```
 
-## Environment configuration
+## Implementation Notes - IMP
+# 1Fi Marketplace is fully implemented as the primary feature.
 
-Create `.env` if you want a different API:
+# Product data is handled through a mock REST API rather than being hardcoded directly into UI components.
 
-```text
-VITE_API_URL=http://localhost:3001
-```
+# Product listing includes product images, names, pricing, ratings, variants, and EMI information.
 
-The API layer reads this variable, so replacing JSON Server with a real backend later only requires changing the service configuration rather than rewriting UI components.
+# Variant-based pricing and EMI calculation are implemented. Selecting a different variant recalculates the monthly EMI based on its price.
 
-## Engineering decisions
+# Product details page supports variant selection and EMI-plan selection.
 
-### 1. API abstraction
+# Search functionality is implemented for marketplace products.
 
-Components do not call `fetch()` directly. `src/services/productApi.js` owns API communication.
+# Loading, error, and empty-result states are included.
 
-### 2. Reusable components
+# The UI is responsive and follows the existing 1Fi-inspired purple design system, spacing, cards, buttons, and bottom navigation style.
+# Top Brands and Nearby Stores are kept as non-functional/placeholder sections as their implementation was not required for the assignment.
+# The Nearby Stores option currently does not have store/location functionality implemented.
+# The bottom navigation is primarily provided for UI consistency; only the Shop/Marketplace flow is functional in this assignment scope.
+# Clicking "Proceed with EMI" / "Pay EMI" currently triggers a confirmation alert instead of a real payment transaction.
+# No real payment gateway, authentication, order processing, or financial transaction has been integrated.
+# EMI plans use mock data/configuration for demonstration purposes.
+# Product images and product information are also based on mock/demo data.
+# The project is structured so that the mock API can later be replaced with a production backend without changing the UI components significantly.
 
-Product cards and EMI selection are isolated components so they can be reused for additional marketplace categories.
-
-### 3. State management
-
-Local React state is sufficient for this assignment:
-
-- search query
-- selected product variant
-- selected EMI plan
-- loading/error/data states
-
-A global state library would add unnecessary complexity at this scope.
-
-### 4. Loading and error states
-
-Marketplace and product details both expose loading and error states.
-
-### 5. Responsive UI
-
-The layout uses Tailwind breakpoints for mobile, tablet and desktop widths.
-
-## Important note
 
 The product numbers in `mock-api/db.json` are demonstration data only. Replace them with the API/business-approved EMI calculations if a real backend is provided.
